@@ -86,10 +86,10 @@ function Bottle(canvas) {
         back:  this.createTexture()
     };
 
-    this.brainTexture = this.loadTexture("brain.png");
-    this.bowlTexture = this.loadTexture("bowl.png");
-    this.bowlTexture2 = this.loadTexture("bowl2.png");
-    this.logoTexture = this.loadTexture("logo.png");
+    this.brainTexture = this.loadTexture("images/brain.png");
+    this.bowlTexture = this.loadTexture("images/bowl.png");
+    this.bowlTexture2 = this.loadTexture("images/bowl2.png");
+    this.logoTexture = this.loadTexture("images/logo.png");
 
     this.is_pouring = false;
     this.target = null;

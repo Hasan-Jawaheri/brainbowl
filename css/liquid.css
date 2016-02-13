@@ -1,4 +1,4 @@
-@font-face { font-family: Scoreboard; src: url('scoreboard.ttf'); }
+@font-face { font-family: Scoreboard; src: url('fonts/scoreboard.ttf'); }
 
 html, div, body {
     background: black;
