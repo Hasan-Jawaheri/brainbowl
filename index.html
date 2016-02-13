@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain Boowwwlll</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="liquid.css"/>
+    <script src="lib/box2d.js"></script>
+    <script src="lib/igloo-0.0.1.js"></script>
+    <script src="src/fps.js"></script>
+    <script src="src/utility.js"></script>
+    <script src="src/bottle.js"></script>
+    <script src="src/liquid.js"></script>
+
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <canvas id="display" width="1000" height="800"></canvas>
+    </div>
+    <div>
+      <div id="sc0">
+        <div class="score" id="score0">0</div>
+        <a class="btn btn-success" onclick="bottle.scoreFor(0)">+</a>
+        <a class="btn btn-danger" onclick="bottle.scoreFor(0, 1)">-</a>
+      </div>
+
+      <div id="sc1">
+        <div class="score" id="score1">0</div>
+        <a class="btn btn-success" onclick="bottle.scoreFor(1)">+</a>
+        <a class="btn btn-danger" onclick="bottle.scoreFor(1, 1)">-</a>
+      </div>
+
+      <div id="sc2">
+        <div class="score" id="score2">0</div>
+        <a class="btn btn-success" onclick="bottle.scoreFor(2)">+</a>
+        <a class="btn btn-danger" onclick="bottle.scoreFor(2, 1)">-</a>
+      </div>
+
+      <div id="sc3">
+        <div class="score" id="score3">0</div>
+        <a class="btn btn-success" onclick="bottle.scoreFor(3)">+</a>
+        <a class="btn btn-danger" onclick="bottle.scoreFor(3, 1)">-</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+@font-face { font-family: Scoreboard; src: url('scoreboard.ttf'); }
+
+html, div, body {
+    background: black;
+    color: salmon;
+    font-family: Scoreboard;
+    margin: auto;
+}
+
+a {
+    color: DarkKhaki;
+}
+
+a {
+    font-family: Scoreboard;
+    font-size: 400%;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid gray;
+}
+
+.score {
+    font-size: 400%;
+}
+
+#sc0 {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -120px;
+}
+
+
+#sc1 {
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -120px;
+}
+
+
+#sc2 {
+    position: absolute;
+    margin-left: 580px;
+    margin-top: -120px;
+}
+
+
+#sc3 {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -120px;
+}
