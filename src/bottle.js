@@ -99,6 +99,7 @@ function Bottle(canvas) {
     this.disturbance = Bottle.IDLE_DISTURBANCE;
     this.juicing = false;
     this.juice_size = Bottle.BALL_COUNT;
+    this.stop_pouring = false;
 }
 
 function handleTextureLoaded(gl, image, texture) {
@@ -335,8 +336,8 @@ Bottle.prototype.createNewBrainBuf = function() {
     var t = this.time / this.speed * Math.PI;
     var warps = [
         [Math.cos(t + 0.1), Math.sin(t + 0.1)],
-        [Math.sin(t + 0.3), Math.cos(t + 0.5)],
-        [Math.cos(t + 0.8), Math.sin(t + 1.1)],
+        [Math.sin(t + 0.3), Math.sin(t + 0.5)],
+        [Math.cos(t + 0.8), Math.cos(t + 1.1)],
         [Math.sin(t + 2.0), Math.cos(t + 3.1)],
     ];
     for (var i = 0; i < warpers.length; i++) {
@@ -501,17 +502,19 @@ Bottle.prototype.step = function() {
             }
         }
     }
-    if (Math.abs(this.speed-target_s) > 0.01)
-        this.speed += (target_s-this.speed) * 0.005;
-    if (Math.abs(this.disturbance-target_d) > 0.001)
-        this.disturbance += (target_d-this.disturbance) * 0.0005;
+    //if (Math.abs(this.speed-target_s) > 0.01)
+    //    this.speed += (target_s-this.speed) * 0.005;
+    //if (Math.abs(this.disturbance-target_d) > 0.001)
+    //    this.disturbance += (target_d-this.disturbance) * 0.0005;
+    this.speed = target_s;
+    this.disturbance = target_d;
 
     this.process_input();
 
     if (this.target != null && !this.is_pouring) {
         //console.log("moving...");
         var target_x = Bottle.BOWL[this.target].get_x();
-        var cur_x = this.cup1.GetPosition().get_x();
+        var cur_x = this.cup2.GetPosition().get_x();
         var cur_y = Bottle.BOWL[Bottle.BOWL.length-1].get_y();
         var delta = target_x - cur_x;
         if (Math.abs(delta) > 40)

@@ -16,33 +16,57 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <div>
+    <div id="display_holder">
       <canvas id="display" width="1000" height="800"></canvas>
+      <div class="holder">
+        <div id="sc0">
+          <div class="score" id="score0">0</div>
+          <a class="btn btn-success" onclick="bottle.scoreFor(0)">+</a>
+          <a class="btn btn-danger" onclick="bottle.scoreFor(0, 1)">-</a>
+        </div>
+
+        <div id="sc1">
+          <div class="score" id="score1">0</div>
+          <a class="btn btn-success" onclick="bottle.scoreFor(1)">+</a>
+          <a class="btn btn-danger" onclick="bottle.scoreFor(1, 1)">-</a>
+        </div>
+
+        <div id="sc2">
+          <div class="score" id="score2">0</div>
+          <a class="btn btn-success" onclick="bottle.scoreFor(2)">+</a>
+          <a class="btn btn-danger" onclick="bottle.scoreFor(2, 1)">-</a>
+        </div>
+
+        <div id="sc3">
+          <div class="score" id="score3">0</div>
+          <a class="btn btn-success" onclick="bottle.scoreFor(3)">+</a>
+          <a class="btn btn-danger" onclick="bottle.scoreFor(3, 1)">-</a>
+        </div>
+      </div>
     </div>
-    <div>
-      <div id="sc0">
-        <div class="score" id="score0">0</div>
-        <a class="btn btn-success" onclick="bottle.scoreFor(0)">+</a>
-        <a class="btn btn-danger" onclick="bottle.scoreFor(0, 1)">-</a>
+    <div id="name0" class="team-name">PLACEHOLDER</div>
+    <div id="name1" class="team-name">PLACEHOLDER</div>
+    <div id="name2" class="team-name">PLACEHOLDER</div>
+    <div id="name3" class="team-name">PLACEHOLDER</div>
+    <div class="row">
+    <form class="form-inline" style="margin-top:150px">
+      <div class="form-group">
+        <label for="usr">Team 1:</label>
+        <input type="text" class="form-control team-namer" id="t0" onkeydown="update_team('t0')" onkeyup="update_team('t0')">
       </div>
-
-      <div id="sc1">
-        <div class="score" id="score1">0</div>
-        <a class="btn btn-success" onclick="bottle.scoreFor(1)">+</a>
-        <a class="btn btn-danger" onclick="bottle.scoreFor(1, 1)">-</a>
+      <div class="form-group">
+        <label for="usr">Team 2:</label>
+        <input type="text" class="form-control team-namer" id="t1" onkeydown="update_team('t1')" onkeyup="update_team('t1')">
       </div>
-
-      <div id="sc2">
-        <div class="score" id="score2">0</div>
-        <a class="btn btn-success" onclick="bottle.scoreFor(2)">+</a>
-        <a class="btn btn-danger" onclick="bottle.scoreFor(2, 1)">-</a>
+      <div class="form-group">
+        <label for="usr">Team 3:</label>
+        <input type="text" class="form-control team-namer" id="t2" onkeydown="update_team('t2')" onkeyup="update_team('t2')">
       </div>
-
-      <div id="sc3">
-        <div class="score" id="score3">0</div>
-        <a class="btn btn-success" onclick="bottle.scoreFor(3)">+</a>
-        <a class="btn btn-danger" onclick="bottle.scoreFor(3, 1)">-</a>
+      <div class="form-group">
+        <label for="usr">Team 4:</label>
+        <input type="text" class="form-control team-namer" id="t3" onkeydown="update_team('t3')" onkeyup="update_team('t3')">
       </div>
+    </form>
     </div>
   </body>
 </html>

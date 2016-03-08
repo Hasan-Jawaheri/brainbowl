@@ -1,10 +1,20 @@
-@font-face { font-family: Scoreboard; src: url('fonts/scoreboard.ttf'); }
+@font-face { font-family: Scoreboard; src: url('../fonts/scoreboard.ttf'); }
 
 html, div, body {
     background: black;
     color: salmon;
     font-family: Scoreboard;
     margin: auto;
+    text-align: center;
+}
+
+#display {
+    width: 1000px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    display: block;
 }
 
 a {
@@ -21,39 +31,69 @@ h1 {
     text-align: center;
 }
 
-canvas {
-    display: block;
-    margin: auto;
-    border: 1px solid gray;
-}
-
 .score {
     font-size: 400%;
 }
 
-#sc0 {
-    position: absolute;
-    margin-left: 100px;
+.holder {
+    position: relative;
     margin-top: -120px;
+    padding-left: 105px;
+    width: 1000px;
+}
+
+#sc0 {
+    float: left;
 }
 
 
 #sc1 {
-    position: absolute;
-    margin-left: 350px;
-    margin-top: -120px;
+    margin-left: 172px;
+    float: left;
 }
 
 
 #sc2 {
-    position: absolute;
-    margin-left: 580px;
-    margin-top: -120px;
+    margin-left: 172px;
+    float: left;
 }
 
 
 #sc3 {
-    position: absolute;
-    margin-left: 850px;
-    margin-top: -120px;
+    margin-left: 172px;
+    float: left;
+}
+
+.team-name {
+    font-size: 400%;
+    margin-top: -700px;
+    color: #82a4ef;
+}
+
+#name0 {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    position:absolute;
+}
+
+#name1 {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    position:absolute;
+}
+
+#name2 {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    position:absolute;
+}
+
+#name3 {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    position:absolute;
 }
